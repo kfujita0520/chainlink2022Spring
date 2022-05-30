@@ -6,19 +6,22 @@ We would like to offer cost-efficient and transparent system for bond issuance a
 In addition, inflation rate metrics should be more tightly tied to people's everyday life cost rather than metrics the central government defines, which sometimes affected by political factor.
 
 ## What it does
+<img align= "right" src="./docs/img/screen.png" alt="screenshot" width="300">
+
 This system can offer following features to achieve quick, cost-efficient and transparent operations.
 - Create bond very easily by just specifying Currency, Maturity Period, Issued Amount.
 - Interest Rate is dynamically changed everyday and this will be the inflation rate defined by Truflation.
 - Accrued interest will be given to user every seconds and user could withdraw it at any time.
 - User can transfer their subscribed amount of bond to other user at their will instantly.
 
-The example screenshot of UI can be found below.
-<img src="https://github.com/kfujita0520/chainlink2022Spring/blob/main/docs/img/screen.png" alt="screenshot" width="300">
+
+The example screenshot of UI can be found on right side.
+
 
 
 For inflation rate, we will take the metric calculated by Truflation in decentralized way. For the detail why central bank metric sometimes has problem and how Truflation can fix this problem is explained in their site.
 https://whitepaper.truflation.com/background/problem
-
+<br clear="right">
 
 ## How we built it
 Please find the system architecture attached on image gallery.
