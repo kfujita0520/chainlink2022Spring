@@ -65,20 +65,27 @@ contract InflationRateFetcher is ChainlinkClient, Ownable {
         int256 _yearOverYearInflation
     )
     public
-    //TODO fix for test
-    //recordChainlinkFulfillment(requestId)
+    recordChainlinkFulfillment(requestId)
     {
         emit RequestFulfilled(requestId, bytesData, _yearOverYearInflation);
         data = bytesData;
-        require(!compareStrings(date, string(data)), "the rate is already update");
-        date = string(data);
+        updateRate(string(data), _yearOverYearInflation);
 
-        uint256 yearOverYearInflation = 0;
+    }
+
+    function updateRate(string memory _date, int256 _yearOverYearInflation) internal {
+        require(!compareStrings(date, _date), "the rate is already update");
+        date = _date;
         if(_yearOverYearInflation >= 0){
             yearOverYearInflation = uint256(_yearOverYearInflation);
-        } //if inflationRate < 0, then inflationRate = 0
+        } else {
+            yearOverYearInflation = 0;
+        }
         IIBondsIssuer(bondIssuer).updateRate(yearOverYearInflation, SECONDS_IN_A_DAY);
+    }
 
+    function updateRateByOwner(string memory _date, int256 _yearOverYearInflation) external onlyOwner {
+        updateRate(_date, _yearOverYearInflation);
     }
 
     function compareStrings(string memory a, string memory b) public view returns (bool) {

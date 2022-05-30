@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Admin</title>
+</head>
+<body>
+<!--
+<style>
+  * {
+    border: 1px solid red;
+  }
+</style>
+-->
+<div class = "nav-bar">
+<ul >
+  <li><a href="/ibond.html">HOME</a></li>
+  <li><a href="/admin.html">ADMIN</a></li>
+  <div class="right-menu">
+  <li><button id="enable-button">Enable Metamask</button></li>
+  </div>
+</ul>
+</div>
+
+
+  <h1>Dashboard for i-Bond Issuer</h1>
+
+<div id="metamask-announce" class="disc" style="display: none">
+  <div >It seems you don't connect to Metamask. Please do so. </div>
+</div>
+
+
+<div class="box-interface">
+  <div class="row1">
+    <h3>Issue New i-Bond</h3>
+  </div>
+  <div class="row2">
+      Bond ID
+      <input id="bondId" type="text" placeholder="ID" />
+      <br/>
+      Currency (ERC-20 Address)
+      <input id="currency-address" type="text" placeholder="address" style="width: 150px;"/>
+      <br/>
+      Total Supply
+      <input id="total-supply" type="text" placeholder="amount" />
+      <br/>
+      Maturity Period
+      <input id="maturity-period" type="text" placeholder="" /> Year
+
+  </div>
+  <div class="row3">
+    <button id="issue-bond-button">Issue New Bond</button>
+  </div>
+</div>
+
+<!--
+TODO: may be better to add reward update tool for test purpose only.
+-->
+
+</body>
+
+
+
+<script type="text/javascript" src="./js/etherjs.min.js"></script>
+<script type="text/javascript" src="./js/erc20Abi.js"></script>
+<script type="text/javascript" src="./js/iBondsIssuerAbi.js"></script>
+<script type="text/javascript" src="./js/admin.js"></script>
+
+</html>

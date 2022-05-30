@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>I-Bond Dashboard</title>
+</head>
+<body>
+<!--
+<style>
+  * {
+    border: 1px solid red;
+  }
+</style>
+-->
+
+<div class = "nav-bar">
+<ul >
+  <li><a href="/ibond.html">HOME</a></li>
+  <li><a href="/admin.html">ADMIN</a></li>
+  <div class="right-menu">
+  <li><button id="enable-button">Enable Metamask</button></li>
+  </div>
+</ul>
+</div>
+
+
+  <h1>I-BOND Dashboard</h1>
+
+<div id="metamask-announce" class="disc" style="display: none">
+  <div >It seems you don't connect to Metamask. Please do so. </div>
+</div>
+
+<div id="buy-announce" class="disc" style="display: none">
+  <div >It seems you don't have enough token to buy bond. <br/>
+    token address:  <span id="token_address"></span></div>
+</div>
+
+<div class="box-interface">
+  <div class="row1">
+    <h3>I-Bond Information</h3>
+  </div>
+  <div class="row2">
+
+      <li>I-Bond ID: <span id="ibondId">100</span><br></li>
+      <li>Currency: <span id="currency_name">USD</span><br></li>
+      <li>Total Supply: <span id="total_supply"> 1000000 </span> Units<br></li>
+      <li>Maturity Period: <span id="maturity_period"> 1 </span>YEAR<br></li>
+      <li>Maturity Date: <span id="maturity_date"> 2022/05/27 </span><br></li>
+      <li>Available to Sell: <br><span id="available_amount"> 999900 </span> Units</li>
+
+  </div>
+
+</div>
+
+  <div class="box-interface">
+    <div class="row1">
+      <h3>User Information</h3>
+    </div>
+    <div class="row2">
+      <label>
+        Claimable Accrued Interest: <br/><span id="interest_amount">31</span> Unit
+      </label>
+      <button id="reward-button" >Get Interest</button>
+    </div>
+    <div class="row3">
+      <label>
+        Current Subscribed Amount: <br/><span id="subscribed_amount">100</span> Unit
+      </label>
+      <button id="subscribe-button" >Subscribe Bond</button>
+      <input id="subscribe-amount" type="text" placeholder="amount" />
+      <button id="redeem-button" >Redeem</button><br/>
+      <button id="transfer-button" >Transfer Bond</button><br/>
+      <input id="transfer-amount" type="text" placeholder="amount" />
+      <input id="transfer-address" type="text" placeholder="address" />
+    </div>
+  </div>
+
+
+
+</body>
+
+<!--
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@compound-finance/compound-js@0.2.5/dist/browser/compound.min.js"></script>
+-->
+
+
+<script type="text/javascript" src="./js/etherjs.min.js"></script>
+<script type="text/javascript" src="./js/erc20Abi.js"></script>
+<script type="text/javascript" src="./js/iBondAbi.js"></script>
+<script type="text/javascript" src="./js/iBond.js"></script>
+
+</html>

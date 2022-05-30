@@ -120,6 +120,7 @@ ReentrancyGuard
     ) external nonReentrant updateReward(useraddress) {
         require(amount > 0 && amount <= _balances[msg.sender], "Cannot withdraw 0");
         _balances[useraddress] = _balances[useraddress].add(amount);
+        _balances[msg.sender] = _balances[msg.sender].sub(amount);
         usdToken.safeTransferFrom(msg.sender, address(this), amount);
         emit Staked(useraddress, amount);
     }
