@@ -13,7 +13,8 @@ This system can offer following features to achieve quick, cost-efficient and tr
 - User can transfer their subscribed amount of bond to other user at their will instantly.
 
 The example screenshot of UI can be found below.
-![screenshot](docs/img/screen.png?raw=true)
+<img src="https://github.com/kfujita0520/chainlink2022Spring/blob/main/docs/img/screen.png" alt="screenshot" width="300">
+
 
 For inflation rate, we will take the metric calculated by Truflation in decentralized way. For the detail why central bank metric sometimes has problem and how Truflation can fix this problem is explained in their site.
 https://whitepaper.truflation.com/background/problem
